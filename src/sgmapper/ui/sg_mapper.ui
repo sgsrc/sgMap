@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GQManagerWidget</class>
+ <widget class="QMainWindow" name="GQManagerWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1010</width>
+    <height>753</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>sgMapper</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="SGCanvasWidget" name="mWgtApp" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <action name="mActOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/4-48.png</normaloff>:/File/4-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open...</string>
+   </property>
+  </action>
+  <action name="mActPrint">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/mAtnFilePrint_48.png</normaloff>:/File/mAtnFilePrint_48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="mActUpload">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/upload48.png</normaloff>:/File/upload48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Upload...</string>
+   </property>
+  </action>
+  <action name="mActSetting">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/3-48.png</normaloff>:/File/3-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Setting...</string>
+   </property>
+  </action>
+  <action name="mAtnRasterAnalyBuildTMS">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/mAtnViewTiling.png</normaloff>:/File/mAtnViewTiling.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tiling map...</string>
+   </property>
+   <property name="iconText">
+    <string>Tiling</string>
+   </property>
+  </action>
+  <action name="mActDownload">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/download48.png</normaloff>:/File/download48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Download...</string>
+   </property>
+  </action>
+  <action name="mAtnRasterAnalyBuildOverview">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/mAtnViewOverView.png</normaloff>:/File/mAtnViewOverView.png</iconset>
+   </property>
+   <property name="text">
+    <string>Build pyramids overviews...</string>
+   </property>
+   <property name="iconText">
+    <string>Overviews</string>
+   </property>
+  </action>
+  <action name="actionAbout_AAIS">
+   <property name="text">
+    <string>About AAIIS</string>
+   </property>
+  </action>
+  <action name="actionPan">
+   <property name="text">
+    <string>pan...</string>
+   </property>
+  </action>
+  <action name="mAtnViewPan">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/mAtnViewPan.png</normaloff>:/File/mAtnViewPan.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pan...</string>
+   </property>
+  </action>
+  <action name="mAtnViewDistance">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/mAtnViewDistance.png</normaloff>:/File/mAtnViewDistance.png</iconset>
+   </property>
+   <property name="text">
+    <string>Distance...</string>
+   </property>
+  </action>
+  <action name="mAtnViewArea">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/File/mAtnViewArea.png</normaloff>:/File/mAtnViewArea.png</iconset>
+   </property>
+   <property name="text">
+    <string>Area...</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SGCanvasWidget</class>
+   <extends>QWidget</extends>
+   <header>sg_canvaswidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resource/sgmapper.qrc"/>
+ </resources>
+ <connections/>
+</ui>
