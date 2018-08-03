@@ -1,6 +1,5 @@
 #include "sg_mapper.h"
 #include "ogr_api.h"
-#include "sg_version.h"
 
 #include <QtCore/QTranslator>
 #include <QtGui/QApplication>

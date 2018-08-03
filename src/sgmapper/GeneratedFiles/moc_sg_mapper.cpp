@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'sg_mapper.h'
 **
-** Created: Tue Jul 3 17:36:43 2018
+** Created: Fri Aug 3 21:01:59 2018
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

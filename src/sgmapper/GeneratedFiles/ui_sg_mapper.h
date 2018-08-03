@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'sg_mapper.ui'
 **
-** Created: Sat Jun 30 01:30:17 2018
+** Created: Fri Aug 3 21:02:38 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

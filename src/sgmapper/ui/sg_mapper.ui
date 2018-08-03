@@ -154,7 +154,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../resource/sgmapper.qrc"/>
+  <include location="../resource/sg_mapper.qrc"/>
  </resources>
  <connections/>
 </ui>
