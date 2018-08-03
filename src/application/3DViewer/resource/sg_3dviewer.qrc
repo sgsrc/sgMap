@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="/File">
+    <file>application.ico</file>
+    <file>Map2D.png</file>
+    <file>48.png</file>
+    <file>1-48.png</file>
+    <file>3-48.png</file>
+    <file>48_save.png</file>
+    <file>open_3d.png</file>
+    <file>open_dem.png</file>
+    <file>open_image.png</file>
+  </qresource>
+  <qresource prefix="/View">
+    <file>mAtnViewPointGrid.png</file>
+    <file>mAtnViewAnimation.png</file>
+    <file>mAtnViewSightCircle.png</file>
+    <file>mAtnViewSightLinear.png</file>
+    <file>mAtnViewSightPoly.png</file>
+    <file>mAtnViewArea.png</file>
+    <file>mAtnViewDistance.png</file>
+    <file>mAtnViewPan.png</file>
+    <file>mAtnViewSectionalPlan.png</file>
+    <file>mAtnViewVolume.png</file>
+  </qresource>
+</RCC>
