@@ -29,11 +29,11 @@ bool qt_do(void* param)
 #include <QtGui\qmenu.h>
 #include "sg_qt.h"
 
-DlgDemo::DlgDemo(QWidget* parent) : QDialog(parent)
+SGPlugin_MenubaseDialog::SGPlugin_MenubaseDialog(QWidget* parent) : QDialog(parent)
 {
 	setupUi(this);
 }
 
-DlgDemo::~DlgDemo()
+SGPlugin_MenubaseDialog::~SGPlugin_MenubaseDialog()
 {
 }

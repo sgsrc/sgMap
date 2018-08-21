@@ -1,14 +1,14 @@
 /********************************************************************************
-** Form generated from reading UI file 'sg_demowidget.ui'
+** Form generated from reading UI file 'sg_menubasewidget.ui'
 **
-** Created: Sun Jul 15 22:55:52 2018
+** Created: Sat Aug 18 10:05:33 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_SG_DEMOWIDGET_H
-#define UI_SG_DEMOWIDGET_H
+#ifndef UI_SG_MENUBASEWIDGET_H
+#define UI_SG_MENUBASEWIDGET_H
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
@@ -23,7 +23,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Dialog
+class Ui_mDlgMenubase
 {
 public:
     QGridLayout *gridLayout;
@@ -32,12 +32,12 @@ public:
     QPushButton *cancelButton;
     QSpacerItem *spacerItem;
 
-    void setupUi(QDialog *Dialog)
+    void setupUi(QDialog *mDlgMenubase)
     {
-        if (Dialog->objectName().isEmpty())
-            Dialog->setObjectName(QString::fromUtf8("Dialog"));
-        Dialog->resize(446, 337);
-        gridLayout = new QGridLayout(Dialog);
+        if (mDlgMenubase->objectName().isEmpty())
+            mDlgMenubase->setObjectName(QString::fromUtf8("mDlgMenubase"));
+        mDlgMenubase->resize(446, 337);
+        gridLayout = new QGridLayout(mDlgMenubase);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         vboxLayout = new QVBoxLayout();
 #ifndef Q_OS_MAC
@@ -47,12 +47,12 @@ public:
         vboxLayout->setContentsMargins(0, 0, 0, 0);
 #endif
         vboxLayout->setObjectName(QString::fromUtf8("vboxLayout"));
-        okButton = new QPushButton(Dialog);
+        okButton = new QPushButton(mDlgMenubase);
         okButton->setObjectName(QString::fromUtf8("okButton"));
 
         vboxLayout->addWidget(okButton);
 
-        cancelButton = new QPushButton(Dialog);
+        cancelButton = new QPushButton(mDlgMenubase);
         cancelButton->setObjectName(QString::fromUtf8("cancelButton"));
 
         vboxLayout->addWidget(cancelButton);
@@ -65,26 +65,26 @@ public:
         gridLayout->addLayout(vboxLayout, 0, 0, 1, 1);
 
 
-        retranslateUi(Dialog);
-        QObject::connect(okButton, SIGNAL(clicked()), Dialog, SLOT(accept()));
-        QObject::connect(cancelButton, SIGNAL(clicked()), Dialog, SLOT(reject()));
+        retranslateUi(mDlgMenubase);
+        QObject::connect(okButton, SIGNAL(clicked()), mDlgMenubase, SLOT(accept()));
+        QObject::connect(cancelButton, SIGNAL(clicked()), mDlgMenubase, SLOT(reject()));
 
-        QMetaObject::connectSlotsByName(Dialog);
+        QMetaObject::connectSlotsByName(mDlgMenubase);
     } // setupUi
 
-    void retranslateUi(QDialog *Dialog)
+    void retranslateUi(QDialog *mDlgMenubase)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0, QApplication::UnicodeUTF8));
-        okButton->setText(QApplication::translate("Dialog", "OK", 0, QApplication::UnicodeUTF8));
-        cancelButton->setText(QApplication::translate("Dialog", "Cancel", 0, QApplication::UnicodeUTF8));
+        mDlgMenubase->setWindowTitle(QApplication::translate("mDlgMenubase", "Menubase dialog", 0, QApplication::UnicodeUTF8));
+        okButton->setText(QApplication::translate("mDlgMenubase", "OK", 0, QApplication::UnicodeUTF8));
+        cancelButton->setText(QApplication::translate("mDlgMenubase", "Cancel", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Dialog: public Ui_Dialog {};
+    class mDlgMenubase: public Ui_mDlgMenubase {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
-#endif // UI_SG_DEMOWIDGET_H
+#endif // UI_SG_MENUBASEWIDGET_H

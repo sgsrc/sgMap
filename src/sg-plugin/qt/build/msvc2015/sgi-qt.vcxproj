@@ -25,7 +25,7 @@
     <ClCompile Include="..\..\src\sg_qt.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\ui\sg_demowidget.ui">
+    <CustomBuild Include="..\..\ui\sg_menubasewidget.ui">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
@@ -46,43 +46,45 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\GeneratedFiles\ui_sg_demowidget.h" />
     <CustomBuild Include="..\..\src\sg_qt.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing sg_qt.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB  "-I$(OutDir)..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB  "-I.\..\..\..\..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing sg_qt.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\..\..\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB -D_WINDLL  "-I$(OutDir)..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB -D_WINDLL  "-I.\..\..\..\..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing sg_qt.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\..\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB  "-I$(OutDir)..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB  "-I.\..\..\..\..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing sg_qt.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\..\..\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB -D_WINDLL  "-I$(OutDir)..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB -D_WINDLL  "-I.\..\..\..\..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
     </CustomBuild>
     <CustomBuild Include="..\..\src\sg_plugin.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing sg_plugin.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB  "-I$(OutDir)..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB  "-I.\..\..\..\..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing sg_plugin.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\..\..\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB -D_WINDLL  "-I$(OutDir)..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB -D_WINDLL  "-I.\..\..\..\..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing sg_plugin.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\..\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB  "-I$(OutDir)..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB  "-I.\..\..\..\..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing sg_plugin.h...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\..\..\GeneratedFiles\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB -D_WINDLL  "-I$(OutDir)..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\..\..\GeneratedFiles\moc_%(Filename).cpp"  -D_MBCS -DPLUGINEXTERN_EXPORT -DQT_CORE_LIB -DQT_GUI_LIB -D_WINDLL  "-I.\..\..\..\..\include" "-I$(QTDIR)\include" "-I.\..\..\GeneratedFiles" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(NOINHERIT)\."</Command>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\GeneratedFiles\ui_sg_menubasewidget.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F75B681F-AD00-44D9-82AE-F8583601CD97}</ProjectGuid>
@@ -129,36 +131,36 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\..\..\..\..\Libs\$(PlatformName)\</OutDir>
+    <OutDir>..\..\..\..\..\libs_$(PlatformToolset)\$(PlatformName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\..\..\..\..\Libs\$(PlatformName)\</OutDir>
+    <OutDir>C:\Program Files\sgMap\Bin64</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IntDir>..\..\..\..\..\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+    <IntDir>..\..\..\..\..\obj_$(PlatformToolset)\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IntDir>..\..\..\..\..\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+    <IntDir>..\..\..\..\..\obj_$(PlatformToolset)\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\..\..\..\..\Libs\$(PlatformName)\</OutDir>
+    <OutDir>..\..\..\..\..\libs_$(PlatformToolset)\$(PlatformName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\..\..\..\..\Libs\$(PlatformName)\</OutDir>
+    <OutDir>C:\Program Files\sgMap\Bin64</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IntDir>..\..\..\..\..\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+    <IntDir>..\..\..\..\..\obj_$(PlatformToolset)\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IntDir>..\..\..\..\..\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+    <IntDir>..\..\..\..\..\obj_$(PlatformToolset)\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(OutDir)../include;$(QTDIR)\include;.\..\..\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\..\..\..\..\include;$(QTDIR)\include;.\..\..\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;PLUGINEXTERN_EXPORT;QT_CORE_LIB;QT_GUI_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -166,14 +168,14 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>npsgobjectd.lib;QtCored4.lib;QtGuid4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>npsgobject.lib;QtCore4.lib;QtGuid4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(OutDir)../include;$(QTDIR)\include;.\..\..\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\..\..\..\..\include;$(QTDIR)\include;.\..\..\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;PLUGINEXTERN_EXPORT;QT_CORE_LIB;QT_GUI_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -181,7 +183,7 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>npsgobjectd.lib;QtCore4d.lib;QtGui4d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>npsgobject.lib;QtCore4.lib;QtGui4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -190,7 +192,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(OutDir)../include;$(QTDIR)\include;.\..\..\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\..\..\..\..\include;$(QTDIR)\include;.\..\..\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;PLUGINEXTERN_EXPORT;QT_CORE_LIB;QT_GUI_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -209,7 +211,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(OutDir)../include;$(QTDIR)\include;.\..\..\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\..\..\..\..\include;$(QTDIR)\include;.\..\..\GeneratedFiles;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;PLUGINEXTERN_EXPORT;QT_CORE_LIB;QT_GUI_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>

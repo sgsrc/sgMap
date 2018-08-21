@@ -30,18 +30,18 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\ui\sg_demowidget.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="..\..\src\sg_plugin.h">
       <Filter>src</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\src\sg_qt.h">
       <Filter>src</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\ui\sg_menubasewidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\GeneratedFiles\ui_sg_demowidget.h">
+    <ClInclude Include="..\..\GeneratedFiles\ui_sg_menubasewidget.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>

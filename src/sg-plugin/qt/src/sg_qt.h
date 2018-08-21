@@ -2,15 +2,15 @@
 #define _SG_DEMO_HEADER
 
 #include <QtGui>
-#include "ui_sg_demowidget.h"
+#include "ui_sg_menubasewidget.h"
 
-class DlgDemo : public QDialog, Ui::Dialog
+class SGPlugin_MenubaseDialog : public QDialog, Ui::mDlgMenubase
 {
 	Q_OBJECT
 
 public:
-	DlgDemo(QWidget* parent);
-	~DlgDemo();
+	SGPlugin_MenubaseDialog(QWidget* parent = 0);
+	~SGPlugin_MenubaseDialog();
 
 protected Q_SLOTS:
 	

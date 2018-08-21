@@ -11,29 +11,18 @@ OGRFeatureCanvasH s_hFtCvs = 0;
 OGRFeatureLayerH s_hFtLayer = 0;
 OGRCanvasH s_hCvs = 0;
 
-void *getHexToCallbackAddress(const char* pszHex, int encode)
+static void OGRGetParameter(OGRParametersH hParams)
 {
-	void* poVal = 0;
-#if defined(_WIN64) || defined(_M_X64)
-	_Longlong tmpVal = std::stoll(pszHex, 0, encode);
-	poVal = (void*) tmpVal;
-#else
-	long tmpVal = std::stol(pszHex, 0, encode);
-	poVal = (void*) tmpVal;
-#endif
-	return poVal;
-}
-
-void OGRGetParameter(OGRVariantListH hArg)
-{
-	std::map<std::string, std::string>::iterator iter = hArg->find("Application");
-	if(iter != hArg->end()) s_hApp = getHexToCallbackAddress(iter->second.c_str());
-	iter = hArg->find("FeatureCanvas");
-	if(iter != hArg->end()) s_hFtCvs = getHexToCallbackAddress(iter->second.c_str());
-	iter = hArg->find("FeatureLayer");
-	if(iter != hArg->end()) s_hFtLayer = getHexToCallbackAddress(iter->second.c_str());
-	iter = hArg->find("Canvas");
-	if(iter != hArg->end()) s_hCvs = getHexToCallbackAddress(iter->second.c_str());
+	if(hParams == 0) return;
+	OGRParameterH hParam = 0;
+	hParam = OGR_PTS_GetParameter(hParams, "Application");
+	if(hParam != 0) s_hApp = OGR_PT_GetHandle(hParam);
+	hParam = OGR_PTS_GetParameter(hParams, "FeatureCanvas");
+	if(hParam != 0) s_hFtCvs = OGR_PT_GetHandle(hParam);
+	hParam = OGR_PTS_GetParameter(hParams, "FeatureLayer");
+	if(hParam != 0) s_hFtLayer = OGR_PT_GetHandle(hParam);
+	hParam = OGR_PTS_GetParameter(hParams, "Canvas");
+	if(hParam != 0) s_hCvs = OGR_PT_GetHandle(hParam);
 }
 
 // ********** extern function ************ 
@@ -73,6 +62,7 @@ PLUGINEXTERN bool qt_do(void* param);
 #include "sg_qt.h"
 
 SGPlugin s_oPluginEvent;
+QMainWindow* s_MainWidget;
 QString GetLoadLanguagePack()
 {
 	OGRCommonFactoryH hComFac = OGR_CF_GetCommonFactory();
@@ -84,65 +74,31 @@ QString GetLoadLanguagePack()
 	return (strPath + "/Config/Languages/sgi-qt_" + (strLang != "" ? strLang : "en_US"));
 }
 
-void SGPlugin::on_mAction_triggered(bool)
-{
-	QMainWindow* s_MainWidget = (QMainWindow*) s_hApp;
-	DlgDemo dlg(s_MainWidget);
-	dlg.exec();
-}
-
 QTranslator s_trsLang;
-QMenu* SetMenuPosition(QMenuBar* mnuBar, QString &strPos, QString &strTitle)
-{
-	QStringList lstName = strPos.split(";");
-	QStringList lstTitle = strTitle.split(";");
-	QMenu* mnu = 0;
-	for(int i=0;i<lstName.size();i++)
-	{
-		QList<QMenu*> lstMenu;
-		if(i == 0)
-			lstMenu = mnuBar->findChildren<QMenu*>();
-		else if(mnu != 0)
-			lstMenu = mnu->findChildren<QMenu*>();
-		bool bFind = false;
-		for(QList<QMenu*>::iterator iter = lstMenu.begin(); iter != lstMenu.end(); iter++)
-		{
-			if((*iter)->objectName().compare(lstName[i], Qt::CaseInsensitive) == 0)
-			{
-				mnu = (*iter);
-				bFind = true;
-				break;
-			}
-		}
-		if(bFind == false)
-		{
-			if(i == 0)
-				mnu = mnuBar->addMenu(lstTitle[i]);
-			else
-				mnu = mnu->addMenu(lstTitle[i]);
-			mnu->setObjectName(lstName[i]);
-		}
-	}
-	return mnu;
-}
-
 void qt_init(void* param)
 {
-	OGRVariantListH hArg = (OGRVariantListH) param;
-
 	// init mapper gui
-	if(hArg->size() > 0)
-		OGRGetParameter(hArg);
+	OGRParametersH hParams = (OGRParametersH) param;
+	OGRParameterH hErrParam = 0;
+	if(hParams != 0) hErrParam = OGR_PTS_GetParameter(hParams, "error");
+	OGRGetParameter(hParams);
+
 	s_trsLang.load(GetLoadLanguagePack());
 	qApp->installTranslator(&s_trsLang);
 
 	// add menu
-	QMainWindow* pMainWidget = (QMainWindow*) s_hApp;
+	s_MainWidget = (QMainWindow*) OGR_APP_GetMainWindow(s_hApp);
 	QString strMenuRoot = "mnuExtPlugIn";
 	QString strMenuTitle = QApplication::tr("&PlugIn");
-	QMenu* poMenu = SetMenuPosition(pMainWidget->menuBar(), strMenuRoot, strMenuTitle);
+	QMenu* poMenu = (QMenu*)OGR_APP_GetMenu(s_hApp, strMenuRoot.toUtf8().constData(), strMenuTitle.toUtf8().constData());
 	QAction* poAction = poMenu->addAction(QApplication::tr("demo"));
 	poAction->setObjectName("mAtnPlugIn");
 	// connect event
 	QObject::connect(poAction, SIGNAL( triggered(bool) ), &s_oPluginEvent, SLOT(on_mAction_triggered(bool)) );
+}
+
+void SGPlugin::on_mAction_triggered(bool)
+{
+	SGPlugin_MenubaseDialog dlg;
+	dlg.exec();
 }

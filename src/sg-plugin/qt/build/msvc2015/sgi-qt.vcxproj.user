@@ -6,22 +6,27 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin%3bC:\Qt\4.8.4\bin%3b$(PATH)</LocalDebuggerEnvironment>
     <QTDIR>C:\Qt\4.8.4</QTDIR>
-    <LocalDebuggerCommand>$(OutDir)sgMapperd.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>C:\Work\product\Libs\x64\sgMapper.exe</LocalDebuggerCommand>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>
-    </LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"-SG_PLUGIN_PATH "$(OutDir)""</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin%3bC:\Qt\4.8.4\bin%3b$(PATH)</LocalDebuggerEnvironment>
+    <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin%3bC:\Work\product\Libs\x64%3b$(QTDIR)\bin%3bC:\Qt\4.8.4\bin%3b$(PATH)</LocalDebuggerEnvironment>
     <QTDIR>C:\Qt\4.8.4</QTDIR>
-    <LocalDebuggerCommand>$(OutDir)sgMapper.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>C:\Work\product\Libs\x64\sgMapper.exe</LocalDebuggerCommand>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <QTDIR>C:\Qt\4.8.4</QTDIR>
     <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin%3b$(PATH)</LocalDebuggerEnvironment>
+    <LocalDebuggerCommand>C:\Work\product\Libs\x64\sgMapper.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>"-SG_PLUGIN_PATH "$(OutDir)""</LocalDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <QTDIR>C:\Qt\4.8.4</QTDIR>
     <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin%3b$(PATH)</LocalDebuggerEnvironment>
+    <LocalDebuggerCommand>C:\Work\product\Libs\x64\sgMapper.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>"-SG_PLUGIN_PATH "$(OutDir)""</LocalDebuggerCommandArguments>
   </PropertyGroup>
 </Project>
