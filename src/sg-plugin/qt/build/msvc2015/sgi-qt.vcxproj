@@ -86,6 +86,9 @@
   <ItemGroup>
     <ClInclude Include="..\..\GeneratedFiles\ui_sg_menubasewidget.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\config\languages\sgi-qt_ko_KR.ts" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F75B681F-AD00-44D9-82AE-F8583601CD97}</ProjectGuid>
     <Keyword>Qt4VSv1.0</Keyword>
@@ -134,7 +137,7 @@
     <OutDir>..\..\..\..\..\libs_$(PlatformToolset)\$(PlatformName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>C:\Program Files\sgMap\Bin64</OutDir>
+    <OutDir>..\..\..\..\..\libs_$(PlatformToolset)\$(PlatformName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IntDir>..\..\..\..\..\obj_$(PlatformToolset)\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
@@ -148,7 +151,7 @@
     <OutDir>..\..\..\..\..\libs_$(PlatformToolset)\$(PlatformName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>C:\Program Files\sgMap\Bin64</OutDir>
+    <OutDir>..\..\..\..\..\libs_$(PlatformToolset)\$(PlatformName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IntDir>..\..\..\..\..\obj_$(PlatformToolset)\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
@@ -182,7 +185,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>npsgobject.lib;QtCore4.lib;QtGui4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -220,7 +223,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OutDir);$(OutDir)\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>npsgobject.lib;QtCore4.lib;QtGui4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

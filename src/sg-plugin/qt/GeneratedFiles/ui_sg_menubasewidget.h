@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'sg_menubasewidget.ui'
 **
-** Created: Sat Aug 18 10:05:33 2018
+** Created: Wed Aug 22 14:33:49 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

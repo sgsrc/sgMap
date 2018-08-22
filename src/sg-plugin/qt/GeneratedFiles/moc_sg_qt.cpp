@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'sg_qt.h'
 **
-** Created: Tue Aug 21 15:17:51 2018
+** Created: Wed Aug 22 14:33:51 2018
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
