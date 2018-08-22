@@ -1385,6 +1385,8 @@ void				GEO_DLL OGR_APP_KeyUp(OGRApplicationH, unsigned int, unsigned int, unsig
 OGRPrintLayoutWidgetH	GEO_DLL OGR_APP_ShowPrintLayoutWidget(OGRApplicationH, const char*, OGRCanvasH);
 void				GEO_DLL OGR_APP_AddMenu(OGRApplicationH, const char*, const char*, const char*);
 void				GEO_DLL OGR_APP_AddAction(OGRApplicationH, const char*, const char*, const char*, const char*, const char*);
+OGRWidgetH			GEO_DLL OGR_APP_GetMenu(OGRApplicationH, const char*, const char*);
+OGRWidgetH			GEO_DLL OGR_APP_GetMainWindow(OGRApplicationH);
 void				GEO_DLL OGR_APP_RunScript(OGRApplicationH, const char*, int);
 void				GEO_DLL OGR_APP_SendActionEvent(OGRApplicationH, const char*);
 
