@@ -6,3 +6,5 @@ Supports over 1000 APIs including 2D, 3D visualization of vector, images and var
 
 If you want to download setup file, move https://gitlab.com/sgsrc/sgMap and show setup folder.
 (This site is not supported big size setupfile)
+
+* The last source, library and setup files will be apply only in gitlab in the future.
